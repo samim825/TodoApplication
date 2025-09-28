@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" role="main" aria-label="Todo app">
+    <header>
+      <div>
+        <h1>My Todos</h1>
+        <p class="small">Add tasks, mark complete, edit inline, and persist automatically.</p>
+      </div>
+      <div class="small" id="timeNow" aria-hidden="true"></div>
+    </header>
+
+    <div class="input-row" role="form" aria-label="Add todo form">
+      <input id="todoInput" type="text" placeholder="Add a new task (press Enter or click Add)" aria-label="Todo text" />
+      <button id="addBtn" class="btn btn-primary" aria-label="Add todo">Add</button>
+      <button id="clearAll" class="btn btn-ghost" title="Clear completed">Clear Completed</button>
+    </div>
+
+    <div class="stats" aria-live="polite">
+      <div id="count">0 items</div>
+      <div id="activeCount">0 active</div>
+      <div id="completedCount">0 completed</div>
+    </div>
+
+    <ul id="todoList" class="todo-list" aria-label="Todo list"></ul>
+
+    <div id="emptyState" class="empty" style="display:none">No todos yet — add one above ✨</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
